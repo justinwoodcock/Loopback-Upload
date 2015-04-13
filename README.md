@@ -35,5 +35,30 @@ This project is for demonstrating how to implement file upload functionality usi
 	4. Expose **Container** via the REST API, choose `Yes`
 	5. Custom plural form: just leave blank
 	6. For the final "add additional properties" question, just leave blank for now
+6. Nice work, our upload API is now ready to consume!
 
+## Consuming the API
+
+Now that our endpoint is configured and ready to be consumed you can fire up the app and test it out. For this example we'll demonstrate how to create a new container folder and upload a file to that container. However, in addition to the common LoopBack auto generated endpoints you'll find that the loopback-component-storage module exposes a few new endpoints that are [documented here](https://strongloop.com/strongblog/managing-nodejs-loopback-storage-service-provider/).
+
+1. Fire up your StrongLoop app `slc run .`
+2. Open your favorite REST client ([POSTMAN](https://www.getpostman.com/), [Paw](https://luckymarmot.com/paw), etc)
+3. Using your REST client, POST to `http://localhost:3000/api/Containers/`, passing a data object with the name attribute (which is the name for the new container) 
 	
+	```
+		{
+			"name": "images"
+		}
+	```
+4. You will now see a new location: `./uploads/images/`
+5. Create another POST, this time to `http://localhost:3000/api/Containers/images/upload`, passing a file object with the name of `file`.
+	
+	```
+		{
+			"file": [fileobject]
+		}
+	```
+6. Success! Navigate to `./uploads/images` and you will see your uploaded file.
+
+ 
+
