@@ -3,16 +3,18 @@
 This project is for demonstrating how to implement file upload functionality using the [**NodeJS**](https://nodejs.org/) framework [**LoopBack**](http://loopback.io), creating a reference on how to recreate it step by step.
 
 ## Dependencies
-1. **NodeJS:** [nodejs.org](https://nodejs.org/)
-2. **LoopBack:** `npm install -g strongloop`
-3. **loopback-component-storage:** [github.com/strongloop/loopback-component-storage](https://github.com/strongloop/loopback-component-storage)
+1. [**NodeJS**](https://nodejs.org/)
+2. [**LoopBack**](http://loopback.io/getting-started/)
+3. [**loopback-component-storage**](https://github.com/strongloop/loopback-component-storage)
 
 ## Steps
-1. Create Loopback scaffold: `slc loopback`
-2. Install loopback-component-storage module: `npm install loopback-component-storage --save`
-3. Create new datasource
+1. Using the StrongLoop CLI, create a Loopback scaffold:
+	* `slc loopback`
+2. Using NPM, install the loopback-component-storage module
+	* `npm install loopback-component-storage --save`
+3. Using the StrongLoop CLI, create a new datasource
 	1. `slc loopback:datasource`
-	2. You will be prompted to name your datasource, standard naming is `container`
+	2. You will be prompted to name your datasource, name it `container`
 	3. Select the connector for **container**, choose "other" from list of options
 	4. Enter the connector name `loopback-component-storage`
 	5. The new datasource will be added to `server/datasources.json` and is now available in the explorer as a new datasource
@@ -28,13 +30,14 @@ This project is for demonstrating how to implement file upload functionality usi
     			"root": "./uploads"
   			}
   		```
- 5. Create a `Container` model using the StrongLoop CLI, and configure it to utilize the new **container** datasource
- 	1. `slc loopback:model` Enter the model name: `Container`
- 	2. Select the data-source to attach **Container** to, choose `container (loopback-component-storage)` from the list
- 	3. Select model's base class, choose `PersistedModel` from the list
-	4. Expose **Container** via the REST API, choose `Yes`
-	5. Custom plural form: just leave blank
-	6. For the final "add additional properties" question, just leave blank for now
+ 5. Using the StrongLoop CLI, create a new `Container` model / REST API endpoint & configure it to utilize the new **container** datasource
+ 	1. `slc loopback:model`
+ 	2. Enter the model name: `Container`
+ 	3. Select the data-source to attach **Container** to: choose `container (loopback-component-storage)` from the list
+ 	4. Select model's base class: choose `PersistedModel` from the list
+	5. Expose **Container** via the REST API, choose `Yes`
+	6. Custom plural form: leave blank
+	7. Add additional properties: leave blank
 6. Nice work, our upload API is now ready to consume!
 
 ## Consuming the API
@@ -43,7 +46,7 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 
 1. Fire up your StrongLoop app `slc run .`
 2. Open your favorite REST client ([POSTMAN](https://www.getpostman.com/), [Paw](https://luckymarmot.com/paw), etc)
-3. Using your REST client, POST to `http://localhost:3000/api/Containers/`, passing a data object with the name attribute (which is the name for the new container) 
+3. Using your REST client, POST to `http://localhost:3000/api/Containers/`, passing a data object with a name attribute (which is the name for the new container) 
 	
 	```
 		{
@@ -51,7 +54,7 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 		}
 	```
 4. You will now see a new location: `./uploads/images/`
-5. Create another POST, this time to `http://localhost:3000/api/Containers/images/upload`, passing a file object with the name of `file`.
+5. Create another POST, this time to `http://localhost:3000/api/Containers/images/upload`, passing a `file` attribute which is your file to upload.
 	
 	```
 		{
@@ -59,6 +62,14 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 		}
 	```
 6. Success! Navigate to `./uploads/images` and you will see your uploaded file.
+
+## Don't have time, hate reading, can't follow diections or just lazy?
+
+1. `git clone git@git.jagged.io:Sandbox/Loopback-Upload.git`
+2. `npm install`
+3. `slc run .`
+4. Refer to the **Consuming the API** section above
+
 
  
 
