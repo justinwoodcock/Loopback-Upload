@@ -62,7 +62,7 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 	```
 6. Success! Navigate to `./uploads/images` and you will see your uploaded file.
 
-## Don't have time, hate reading, can't follow diections or just lazy?
+## Don't have time, hate reading, can't follow directions or just lazy?
 
 1. Make sure you have the dependencies listed above installed.
 2. `git clone git@git.jagged.io:Sandbox/Loopback-Upload.git`
