@@ -65,7 +65,7 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 ## Don't have time, hate reading, can't follow directions or just lazy?
 
 1. Make sure you have the dependencies listed above installed.
-2. `git clone git@git.jagged.io:Sandbox/Loopback-Upload.git`
+2. `git clone git@github.com:justinwoodcock/Loopback-Upload.git`
 3. `npm install`
 4. `slc run .`
 5. Refer to the **Consuming the API** section above
