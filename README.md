@@ -5,12 +5,11 @@ This project is for demonstrating how to implement file upload functionality usi
 ## Dependencies
 1. [NodeJS](https://nodejs.org/)
 2. [LoopBack](http://loopback.io/getting-started/)
-3. [loopback-component-storage](https://github.com/strongloop/loopback-component-storage)
 
 ## Steps
 1. Using the StrongLoop CLI, create a Loopback scaffold:
 	* `slc loopback`
-2. Using NPM, install the loopback-component-storage module
+2. Using NPM, install the [loopback-component-storage](https://github.com/strongloop/loopback-component-storage) module
 	* `npm install loopback-component-storage --save`
 3. Using the StrongLoop CLI, create a new datasource
 	1. `slc loopback:datasource`
@@ -65,10 +64,11 @@ Now that our endpoint is configured and ready to be consumed you can fire up the
 
 ## Don't have time, hate reading, can't follow diections or just lazy?
 
-1. `git clone git@git.jagged.io:Sandbox/Loopback-Upload.git`
-2. `npm install`
-3. `slc run .`
-4. Refer to the **Consuming the API** section above
+1. Make sure you have the dependencies listed above installed.
+2. `git clone git@git.jagged.io:Sandbox/Loopback-Upload.git`
+3. `npm install`
+4. `slc run .`
+5. Refer to the **Consuming the API** section above
 
 
  
