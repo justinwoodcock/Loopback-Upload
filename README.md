@@ -28,7 +28,12 @@ This project is for demonstrating how to implement file upload functionality usi
     			"root": "./uploads"
   			}
   		```
- 
-	
+ 5. Create a `Container` model using the StrongLoop CLI, and configure it to utilize the new **container** datasource
+ 	1. `slc loopback:model` Enter the model name: `Container`
+ 	2. Select the data-source to attach **Container** to, choose `container (loopback-component-storage)` from the list
+ 	3. Select model's base class, choose `PersistedModel` from the list
+	4. Expose **Container** via the REST API, choose `Yes`
+	5. Custom plural form: just leave blank
+	6. For the final "add additional properties" question, just leave blank for now
 
 	

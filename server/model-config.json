@@ -25,5 +25,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Container": {
+    "dataSource": "container",
+    "public": true
   }
 }
