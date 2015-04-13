@@ -1,11 +1,11 @@
 # LoopBack Upload
 
-This project is for demonstrating how to implement file upload functionality using the [**NodeJS**](https://nodejs.org/) framework [**LoopBack**](http://loopback.io), creating a reference on how to recreate it step by step.
+This project is for demonstrating how to implement file upload functionality using the [NodeJS](https://nodejs.org/) framework [LoopBack](http://loopback.io), creating a reference on how to recreate it step by step.
 
 ## Dependencies
-1. [**NodeJS**](https://nodejs.org/)
-2. [**LoopBack**](http://loopback.io/getting-started/)
-3. [**loopback-component-storage**](https://github.com/strongloop/loopback-component-storage)
+1. [NodeJS](https://nodejs.org/)
+2. [LoopBack](http://loopback.io/getting-started/)
+3. [loopback-component-storage](https://github.com/strongloop/loopback-component-storage)
 
 ## Steps
 1. Using the StrongLoop CLI, create a Loopback scaffold:
