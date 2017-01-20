@@ -33,7 +33,7 @@ This project is for demonstrating how to implement file upload functionality usi
  	1. `slc loopback:model`
  	2. Enter the model name: `Container`
  	3. Select the data-source to attach **Container** to: choose `container (loopback-component-storage)` from the list
- 	4. Select model's base class: choose `PersistedModel` from the list
+ 	4. Select model's base class: choose `Model` from the list
 	5. Expose **Container** via the REST API, choose `Yes`
 	6. Custom plural form: leave blank
 	7. Add additional properties: leave blank
